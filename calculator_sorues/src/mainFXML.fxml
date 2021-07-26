@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg.mainController">
+   <children>
+      <Pane fx:id="topBar" layoutX="-3.0" layoutY="-10.0" prefHeight="44.0" prefWidth="469.0" styleClass="topBar" stylesheets="@pkg/style.css">
+         <children>
+            <ImageView fx:id="close" fitHeight="27.0" fitWidth="27.0" layoutX="439.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/close_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimize" fitHeight="27.0" fitWidth="27.0" layoutX="412.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/minimize-png.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="51.0" layoutX="8.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/calculator-icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="39.0" layoutY="15.0" prefHeight="17.0" prefWidth="97.0" text="calculator" textFill="#f5f5f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="-3.0" layoutY="34.0" prefHeight="134.0" prefWidth="469.0" styleClass="procesView" stylesheets="@pkg/style.css">
+         <children>
+            <Label fx:id="resultView" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="47.0" prefHeight="80.0" prefWidth="441.0" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </Label>
+            <Label fx:id="process" alignment="CENTER_RIGHT" layoutX="7.0" layoutY="3.0" prefHeight="44.0" prefWidth="455.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="btnRemin" layoutY="168.0" onMouseClicked="#symbolClick" prefHeight="110.0" prefWidth="116.0" styleClass="remin" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="\%">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="btnChange" layoutX="116.0" layoutY="168.0" onMouseClicked="#change" prefHeight="110.0" prefWidth="116.0" styleClass="change" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" layoutX="35.0" layoutY="36.0" prefHeight="39.0" prefWidth="47.0" text="+/-">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btnClear" layoutX="232.0" layoutY="168.0" onMouseClicked="#symbolClick" prefHeight="110.0" prefWidth="116.0" styleClass="clear" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="C">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="btnDiv" layoutX="348.0" layoutY="168.0" onMouseClicked="#symbolClick" prefHeight="110.0" prefWidth="116.0" styleClass="div" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="/" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="btn7" layoutY="278.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num7" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="7">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn8" layoutX="116.0" layoutY="278.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num8" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="8">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn9" layoutX="232.0" layoutY="278.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num9" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="9">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btnMul" layoutX="348.0" layoutY="278.0" onMouseClicked="#symbolClick" prefHeight="110.0" prefWidth="116.0" styleClass="mul" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="32.0" prefHeight="44.0" prefWidth="27.0" text="x" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn4" layoutY="388.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num4" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="4">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn5" layoutX="116.0" layoutY="388.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num5" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="5">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn6" layoutX="232.0" layoutY="388.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num6" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="6">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btnSub" layoutX="348.0" layoutY="388.0" onMouseClicked="#symbolClick" prefHeight="110.0" prefWidth="116.0" styleClass="sub" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="29.0" prefHeight="39.0" prefWidth="27.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn1" layoutY="498.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num1" stylesheets="@pkg/style.css">
+         <children>
+            <Label fx:id="num1" alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="1">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn2" layoutX="116.0" layoutY="498.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num2" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="2">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn3" layoutX="232.0" layoutY="498.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num3" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="3">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btnAdd" layoutX="348.0" layoutY="498.0" onMouseClicked="#symbolClick" prefHeight="110.0" prefWidth="116.0" styleClass="add" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="30.0" prefHeight="39.0" prefWidth="27.0" text="+" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btn0" layoutY="608.0" onMouseClicked="#numClick" prefHeight="110.0" prefWidth="116.0" styleClass="num0" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="36.0" prefHeight="39.0" prefWidth="27.0" text="0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btnComma" layoutX="116.0" layoutY="608.0" onMouseClicked="#comma" prefHeight="110.0" prefWidth="116.0" styleClass="comma" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="36.0" prefHeight="39.0" prefWidth="37.0" text=".">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="btnResult" layoutX="348.0" layoutY="608.0" onMouseClicked="#symbolClick" prefHeight="110.0" prefWidth="116.0" styleClass="result" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="30.0" prefHeight="39.0" prefWidth="27.0" text="=" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="232.0" layoutY="608.0" onMouseClicked="#back" prefHeight="110.0" prefWidth="116.0" styleClass="num3" stylesheets="@pkg/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="36.0" prefHeight="39.0" prefWidth="63.0" text="back">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

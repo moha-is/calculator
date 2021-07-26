@@ -1,0 +1,91 @@
+.topBar{
+    -fx-background-color: #373737;
+}
+
+.procesView{
+    -fx-background-color: #222;
+}
+
+.remin{
+        -fx-background-color: #DEDEDE;
+}
+
+.change{
+        -fx-background-color: #EEEEEE;
+}
+
+.clear {
+        -fx-background-color: #FAFAFA;
+}
+
+
+
+.div{
+        -fx-background-color: #922ED8;
+}
+
+.add{
+        -fx-background-color: #922ED8;
+}
+
+.sub{
+        -fx-background-color: #922ED8;
+}
+
+.mul{
+        -fx-background-color: #922ED8;
+}
+
+
+
+.comma{
+        -fx-background-color: #EEEEEE;
+}
+
+.result{
+        -fx-background-color: #D93268;
+}
+
+
+
+
+
+.num0{
+        -fx-background-color: #DEDEDE;
+}
+
+.num1{
+        -fx-background-color: #DEDEDE;
+}
+
+.num2{
+        -fx-background-color: #EEEEEE;
+}
+
+.num3{
+        -fx-background-color: #FAFAFA;
+}
+
+.num4{
+        -fx-background-color: #DEDEDE;
+}
+
+.num5{
+        -fx-background-color: #EEEEEE;
+}
+
+.num6{
+        -fx-background-color: #FAFAFA;
+}
+
+.num7{
+        -fx-background-color: #DEDEDE;
+}
+
+.num8{
+        -fx-background-color: #EEEEEE;
+}
+
+.num9{
+        -fx-background-color: #FAFAFA;
+}
